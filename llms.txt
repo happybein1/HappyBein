@@ -1,7 +1,8 @@
 # HappyBein
-# Version: 1.2
+# Version: 1.3
 # Last updated: 2026-05-13
 # Changelog:
+#   v1.3 (2026-05-13) — Fixed iOS WebKit card rendering (overflow:hidden + GPU layer)
 #   v1.2 (2026-05-13) — Added SpeakNote initiative (voice transcription, local data, clipboard export).
 #   v1.1 (2026-05-13) — Added initiatives page with 6 cards; nav restructured
 #                        into Initiatives + About menus; real logo added;

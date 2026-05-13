@@ -332,23 +332,23 @@ section { padding: 4rem 1.5rem; }
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: 12px;
-  /* No overflow:hidden — causes clipping bugs on iOS Safari/Edge */
+  overflow: hidden; /* clips banner corners — safe when no absolute children bleed outside */
   display: flex;
   flex-direction: column;
-  /* Use outline to fake the top-radius clip for the banner */
   position: relative;
   box-shadow: 0 2px 14px var(--shadow);
-  /* scroll anchor offset for fixed nav */
   scroll-margin-top: calc(var(--nav-h) + 12px);
   -webkit-tap-highlight-color: transparent;
-  /* clip the banner corners without overflow:hidden */
-  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  /* Force GPU layer so border-radius + overflow renders correctly on iOS WebKit */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  /* Ensure background isn't clipped by stacking context */
+  isolation: isolate;
 }
 
-/* Coloured top stripe */
+/* Coloured top stripe — no border-radius needed, card clips it */
 .init-banner {
   height: 7px;
-  border-radius: 12px 12px 0 0;
   flex-shrink: 0;
 }
 .init-card.happybein .init-banner { background: linear-gradient(90deg,#29ABE2,#4CAF50); }
@@ -360,7 +360,7 @@ section { padding: 4rem 1.5rem; }
 .init-card.speaknote  .init-banner { background: linear-gradient(90deg,#00695C,#00897B); }
 
 .init-body {
-  padding: 1.25rem 1.4rem 1.5rem;
+  padding: 1.4rem 1.5rem 1.6rem;
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
