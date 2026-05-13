@@ -1,7 +1,8 @@
 # HappyBein
-# Version: 1.4
+# Version: 1.5
 # Last updated: 2026-05-13
 # Changelog:
+#   v1.5 (2026-05-13) — Version bar moved to below header (visible on all pages)
 #   v1.4 (2026-05-13) — Fixed nav dropdown hover gap; initiative links now point to external URLs
 #   v1.3 (2026-05-13) — Fixed iOS WebKit card rendering (overflow:hidden + GPU layer)
 #   v1.2 (2026-05-13) — Added SpeakNote initiative (voice transcription, local data, clipboard export).

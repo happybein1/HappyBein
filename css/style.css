@@ -1,5 +1,5 @@
 /* ============================================================
-   HappyBein – v1.2 · May 2026
+   HappyBein – v1.5 · May 2026
    iOS/WebKit safe — all browsers on iOS use WebKit rendering
    ============================================================ */
 
@@ -47,6 +47,40 @@ img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
 button { -webkit-appearance: none; appearance: none; }
+
+/* ── Version bar ─────────────────────────────────────────── */
+.version-bar {
+  position: fixed;
+  top: var(--nav-h);
+  left: 0; right: 0;
+  height: 22px;
+  background: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  z-index: 999;
+  border-bottom: 1px solid rgba(42,191,191,0.2);
+}
+.version-bar span {
+  font-family: 'Courier New', monospace;
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.06em;
+}
+.version-bar .v-tag {
+  color: var(--teal);
+  font-weight: 700;
+}
+.version-bar .v-sep {
+  color: rgba(255,255,255,0.15);
+}
+
+/* Push page content down to clear both nav + version bar */
+:root {
+  --bar-h: 22px;
+  --nav-total: calc(var(--nav-h) + var(--bar-h));
+}
 
 /* ── Navigation ──────────────────────────────────────────── */
 nav {
@@ -183,7 +217,7 @@ nav {
 
 /* ── Hero ────────────────────────────────────────────────── */
 .hero {
-  padding-top: calc(var(--nav-h) + 4rem);
+  padding-top: calc(var(--nav-total) + 3.5rem);
   padding-bottom: 4rem; padding-left: 1.5rem; padding-right: 1.5rem;
   max-width: var(--max-w); margin: 0 auto;
   display: grid; grid-template-columns: 1fr 1.15fr;
@@ -279,7 +313,7 @@ section { padding: 4rem 1.5rem; }
 .btn-white:hover, .btn-white:active { background: var(--light-bg); }
 
 /* Page hero */
-.page-hero { padding-top: calc(var(--nav-h) + 3.5rem); padding-bottom: 3rem; padding-left: 1.5rem; padding-right: 1.5rem; background: var(--light-bg); border-bottom: 1px solid var(--border); }
+.page-hero { padding-top: calc(var(--nav-total) + 3rem); padding-bottom: 3rem; padding-left: 1.5rem; padding-right: 1.5rem; background: var(--light-bg); border-bottom: 1px solid var(--border); }
 .page-hero-inner { max-width: var(--max-w); margin: 0 auto; }
 .page-hero h1 { font-family: var(--ff-display); font-size: clamp(1.8rem, 3.5vw, 2.9rem); font-weight: 900; color: var(--ink); letter-spacing: -0.025em; line-height: 1.1; margin-bottom: 1rem; max-width: 700px; }
 .page-hero .lead { font-size: 1rem; color: var(--muted); max-width: 600px; line-height: 1.8; }
@@ -372,7 +406,7 @@ section { padding: 4rem 1.5rem; }
   flex-direction: column;
   position: relative;
   box-shadow: 0 2px 14px var(--shadow);
-  scroll-margin-top: calc(var(--nav-h) + 12px);
+  scroll-margin-top: calc(var(--nav-total) + 12px);
   -webkit-tap-highlight-color: transparent;
   /* Force GPU layer so border-radius + overflow renders correctly on iOS WebKit */
   -webkit-transform: translateZ(0);
@@ -615,7 +649,7 @@ footer { background: var(--ink); color: rgba(255,255,255,0.55); padding: 2.5rem 
 
 /* ── Responsive ──────────────────────────────────────────── */
 @media (max-width: 960px) {
-  .hero { grid-template-columns: 1fr; min-height: auto; padding-top: calc(var(--nav-h) + 2rem); }
+  .hero { grid-template-columns: 1fr; min-height: auto; padding-top: calc(var(--nav-total) + 1.5rem); }
   .what-is-layout, .contact-grid { grid-template-columns: 1fr; gap: 1.75rem; }
   .streams-grid { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
