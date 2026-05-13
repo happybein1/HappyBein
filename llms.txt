@@ -1,7 +1,8 @@
 # HappyBein
-# Version: 1.1
+# Version: 1.2
 # Last updated: 2026-05-13
 # Changelog:
+#   v1.2 (2026-05-13) — Added SpeakNote initiative (voice transcription, local data, clipboard export).
 #   v1.1 (2026-05-13) — Added initiatives page with 6 cards; nav restructured
 #                        into Initiatives + About menus; real logo added;
 #                        collapsible descriptions; versioned footer.
@@ -27,6 +28,7 @@ HappyBein operates through two vehicles: the Foundation (research & frameworks) 
 - [YeahDev](https://yeahdev.com): Article repository. No-fluff, no-paywall practical knowledge for founders, builders, and makers. Categories: AI Tools, Automation, Marketing, Growth.
 - [YeahVibe Workout](https://workout.yeahvibe.com): Micro-exercise tool. Randomly selects short exercises for home or office use. Includes YouTube how-to videos. Available in French and English.
 - [YeahVibe GameTrack](https://gametrack.yeahvibe.com): Score tracker. Lightweight real-time scoreboard for board games, card games, and any multiplayer activity.
+- [SpeakNote](https://speaknote.happybein.com): Voice transcription tool. Listens and transcribes speech in multiple languages. Data stays fully local — no server, no account. One-tap clipboard export.
 
 ## Navigation Structure (v1.1)
 

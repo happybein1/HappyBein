@@ -356,7 +356,8 @@ section { padding: 4rem 1.5rem; }
 .init-card.yeahsight .init-banner { background: linear-gradient(90deg,#1A9A9A,#2ABFBF); }
 .init-card.yeahdev   .init-banner { background: linear-gradient(90deg,#C1390F,#E64A19); }
 .init-card.workout   .init-banner { background: linear-gradient(90deg,#1565C0,#1E88E5); }
-.init-card.gametrack .init-banner { background: linear-gradient(90deg,#5E35B1,#7E57C2); }
+.init-card.gametrack  .init-banner { background: linear-gradient(90deg,#5E35B1,#7E57C2); }
+.init-card.speaknote  .init-banner { background: linear-gradient(90deg,#00695C,#00897B); }
 
 .init-body {
   padding: 1.25rem 1.4rem 1.5rem;
@@ -384,6 +385,7 @@ section { padding: 4rem 1.5rem; }
 .init-card.yeahdev   .init-icon { background: rgba(193,57,15,0.08); }
 .init-card.workout   .init-icon { background: rgba(21,101,192,0.10); }
 .init-card.gametrack .init-icon { background: rgba(94,53,177,0.10); }
+.init-card.speaknote .init-icon { background: rgba(0,137,123,0.10); }
 
 .init-name {
   font-family: var(--ff-display); font-size: 1.05rem;
@@ -407,6 +409,7 @@ section { padding: 4rem 1.5rem; }
 .init-card.yeahdev   .init-type-badge { background: rgba(193,57,15,0.08);   color: #C1390F; }
 .init-card.workout   .init-type-badge { background: rgba(21,101,192,0.10);  color: #1565C0; }
 .init-card.gametrack .init-type-badge { background: rgba(94,53,177,0.10);   color: #4527A0; }
+.init-card.speaknote .init-type-badge { background: rgba(0,137,123,0.10);    color: #00695C; }
 
 /* Pulsing dot */
 .init-status-dot {
@@ -438,6 +441,7 @@ section { padding: 4rem 1.5rem; }
 .init-card.yeahdev   .init-toggle { color: #C1390F; border-color: rgba(193,57,15,0.25); }
 .init-card.workout   .init-toggle { color: #1565C0; border-color: rgba(21,101,192,0.25); }
 .init-card.gametrack .init-toggle { color: #4527A0; border-color: rgba(94,53,177,0.25); }
+.init-card.speaknote .init-toggle { color: #00695C; border-color: rgba(0,105,92,0.25); }
 .init-toggle:hover, .init-toggle:active { background: var(--light-bg); border-color: var(--teal); }
 .init-card.yeahdev   .init-toggle:hover  { background: rgba(193,57,15,0.05); }
 .init-card.workout   .init-toggle:hover  { background: rgba(21,101,192,0.05); }
@@ -479,6 +483,7 @@ section { padding: 4rem 1.5rem; }
 .init-card.yeahdev   .feat-dot { background: #E64A19; }
 .init-card.workout   .feat-dot { background: #1E88E5; }
 .init-card.gametrack .feat-dot { background: #7E57C2; }
+.init-card.speaknote .feat-dot { background: #00897B; }
 
 /* Pillars list (YeahVibe) */
 .pillars-list {
@@ -526,6 +531,7 @@ section { padding: 4rem 1.5rem; }
 .init-card.yeahdev   .init-link { color: #C1390F; }
 .init-card.workout   .init-link { color: #1565C0; }
 .init-card.gametrack .init-link { color: #4527A0; }
+.init-card.speaknote .init-link { color: #00695C; }
 
 .init-status {
   display: inline-flex; align-items: center; gap: 0.3rem;
