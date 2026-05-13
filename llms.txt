@@ -1,4 +1,11 @@
 # HappyBein
+# Version: 1.1
+# Last updated: 2026-05-13
+# Changelog:
+#   v1.1 (2026-05-13) — Added initiatives page with 6 cards; nav restructured
+#                        into Initiatives + About menus; real logo added;
+#                        collapsible descriptions; versioned footer.
+#   v1.0 (2026-05-13) — Initial static site migrated from WordPress to Cloudflare Pages.
 
 > A purpose-driven foundation dedicated to simplifying societal complexity so that every citizen and leader can make conscious, informed, and impactful decisions.
 
@@ -7,18 +14,24 @@ HappyBein operates through two vehicles: the Foundation (research & frameworks) 
 ## Core Pages
 
 - [Home](https://happybein.com/): Overview of HappyBein and YeahVibe — the architect and the instrument.
-- [The HappyBein Manifesto](https://happybein.com/manifesto.html): Why we exist, how we operate, and what we believe. Covers our North Star, the two streams of clarity (internal efficiency + external understanding), and the synthesis.
-- [YeahVibe Roadmap](https://happybein.com/roadmap.html): Three-phase product roadmap — Foundation (active), Expansion (in progress), Integration (future vision).
-- [Our Initiatives](https://happybein.com/initiatives.html): Descriptions of all five active tools in the Yeah ecosystem.
+- [The HappyBein Manifesto](https://happybein.com/manifesto.html): Why we exist, how we operate, and what we believe.
+- [YeahVibe Roadmap](https://happybein.com/roadmap.html): Three-phase product roadmap — Foundation (active), Expansion (in progress), Integration (future).
+- [Our Initiatives](https://happybein.com/initiatives.html): Descriptions of all six active tools in the Yeah ecosystem.
 - [Connect & Collaborate](https://happybein.com/contact.html): How to reach the team. Email: happybein1@gmail.com
 
 ## Initiatives
 
-- [YeahVibe](https://yeahvibe.com): Core platform. A free, modular repository of "Life Recipes" structured around 5 Pillars of Leverage: Direction, Mindset, Surroundings, Collaboration, and World Context (YeahSight).
-- [YeahSight](https://yeahsight.com): World context tool. Decodes global trends and societal complexity into plain language to support long-term decision-making.
-- [YeahDev](https://yeahdev.com): Article repository. Practical, no-paywall knowledge for founders, builders, and makers developing an initiative.
-- [YeahVibe Workout](https://workout.yeahvibe.com): Micro-exercise tool. Randomly selects short exercises for home or office use. Available in French and English.
-- [YeahVibe GameTrack](https://gametrack.yeahvibe.com): Score tracker. A lightweight real-time scoreboard for board games, card games, and any multiplayer activity.
+- [HappyBein Foundation](https://happybein.com/initiatives.html#happybein): The architect. Non-profit research studio building frameworks to simplify societal complexity. Eindhoven, NL. Founded 2021.
+- [YeahVibe](https://yeahvibe.com): Core platform. Free modular repository of "Life Recipes" around 5 Pillars of Leverage: Direction, Mindset, Surroundings, Collaboration, and YeahSight.
+- [YeahSight](https://yeahsight.com): World context tool (Pillar 5 of YeahVibe). Decodes global trends into plain language to support long-term decision-making.
+- [YeahDev](https://yeahdev.com): Article repository. No-fluff, no-paywall practical knowledge for founders, builders, and makers. Categories: AI Tools, Automation, Marketing, Growth.
+- [YeahVibe Workout](https://workout.yeahvibe.com): Micro-exercise tool. Randomly selects short exercises for home or office use. Includes YouTube how-to videos. Available in French and English.
+- [YeahVibe GameTrack](https://gametrack.yeahvibe.com): Score tracker. Lightweight real-time scoreboard for board games, card games, and any multiplayer activity.
+
+## Navigation Structure (v1.1)
+
+- **Initiatives** menu → links directly to each of the 6 initiative cards by anchor ID
+- **About** menu → The HappyBein Manifesto, YeahVibe Roadmap, Connect & Collaborate
 
 ## About
 

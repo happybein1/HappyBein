@@ -4,234 +4,59 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Initiatives – HappyBein</title>
-  <meta name="description" content="Discover all HappyBein initiatives — YeahVibe, YeahSight, YeahDev, and specialised apps for fitness and gaming." />
+  <meta name="description" content="Discover all HappyBein initiatives — the Foundation, YeahVibe, YeahSight, YeahDev, Workout, and GameTrack." />
   <link rel="icon" href="https://happybein.com/wp-content/uploads/2021/09/fav_icon.png" />
   <link rel="stylesheet" href="css/style.css" />
-  <style>
-    .initiatives-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-      gap: 2rem;
-      margin-top: 2.5rem;
-    }
-
-    /* ---- Card shell ---- */
-    .init-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 2px 16px var(--shadow);
-      transition: transform var(--transition), box-shadow var(--transition);
-    }
-    .init-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 48px var(--shadow);
-    }
-
-    /* Coloured top stripe */
-    .init-banner { height: 7px; }
-    .init-card.yeahvibe  .init-banner { background: linear-gradient(90deg,#2ABFBF,#4DD0D0); }
-    .init-card.yeahsight .init-banner { background: linear-gradient(90deg,#1A9A9A,#2ABFBF); }
-    .init-card.yeahdev   .init-banner { background: linear-gradient(90deg,#C1390F,#E64A19); }
-    .init-card.workout   .init-banner { background: linear-gradient(90deg,#1565C0,#1E88E5); }
-    .init-card.gametrack .init-banner { background: linear-gradient(90deg,#5E35B1,#7E57C2); }
-
-    .init-body {
-      padding: 1.8rem 2rem 2rem;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
-
-    /* Header row: icon + name + url */
-    .init-header { display: flex; align-items: center; gap: 0.9rem; margin-bottom: 1rem; }
-    .init-icon {
-      width: 52px; height: 52px; border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.5rem; flex-shrink: 0;
-    }
-    .init-card.yeahvibe  .init-icon { background: rgba(42,191,191,0.12); }
-    .init-card.yeahsight .init-icon { background: rgba(26,154,154,0.12); }
-    .init-card.yeahdev   .init-icon { background: rgba(193,57,15,0.08); }
-    .init-card.workout   .init-icon { background: rgba(21,101,192,0.10); }
-    .init-card.gametrack .init-icon { background: rgba(94,53,177,0.10); }
-
-    .init-name {
-      font-family: var(--ff-display); font-size: 1.2rem; font-weight: 900;
-      color: var(--ink); letter-spacing: -0.01em; line-height: 1.2;
-    }
-    .init-url {
-      font-size: 0.76rem; color: var(--muted); margin-top: 0.12rem;
-      font-family: 'Courier New', monospace;
-    }
-
-    /* Badge */
-    .init-type-badge {
-      display: inline-flex; align-items: center; gap: 0.35rem;
-      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-      padding: 0.22rem 0.65rem; border-radius: 2rem; margin-bottom: 0.85rem; align-self: flex-start;
-    }
-    .init-card.yeahvibe  .init-type-badge { background: rgba(42,191,191,0.12);  color: var(--teal-dark); }
-    .init-card.yeahsight .init-type-badge { background: rgba(26,154,154,0.12);  color: var(--teal-dark); }
-    .init-card.yeahdev   .init-type-badge { background: rgba(193,57,15,0.08);   color: #C1390F; }
-    .init-card.workout   .init-type-badge { background: rgba(21,101,192,0.10);  color: #1565C0; }
-    .init-card.gametrack .init-type-badge { background: rgba(94,53,177,0.10);   color: #4527A0; }
-
-    /* Pulsing live dot */
-    .init-status-dot {
-      width: 6px; height: 6px; border-radius: 50%; background: currentColor;
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.35} }
-
-    /* Tagline */
-    .init-tagline {
-      font-family: var(--ff-display); font-size: 0.95rem; font-weight: 800;
-      color: var(--ink); margin-bottom: 0.65rem; line-height: 1.4;
-      font-style: italic;
-    }
-
-    /* Description */
-    .init-desc {
-      font-size: 0.9rem; color: var(--muted); line-height: 1.78;
-      margin-bottom: 1.2rem;
-    }
-
-    /* Feature bullets */
-    .init-features {
-      list-style: none; margin: 0 0 1.2rem;
-      display: flex; flex-direction: column; gap: 0.45rem;
-    }
-    .init-features li {
-      font-size: 0.87rem; color: var(--body-text);
-      display: flex; align-items: flex-start; gap: 0.55rem; line-height: 1.5;
-    }
-    .feat-dot {
-      width: 6px; height: 6px; border-radius: 50%;
-      background: var(--teal); flex-shrink: 0; margin-top: 0.42rem;
-    }
-    .init-card.yeahsight .feat-dot { background: var(--teal-dark); }
-    .init-card.yeahdev   .feat-dot { background: #E64A19; }
-    .init-card.workout   .feat-dot { background: #1E88E5; }
-    .init-card.gametrack .feat-dot { background: #7E57C2; }
-
-    /* YeahVibe pillars */
-    .pillars-list {
-      list-style: none; margin: 0 0 1rem;
-      display: flex; flex-direction: column; gap: 0.5rem;
-    }
-    .pillars-list li {
-      font-size: 0.86rem; color: var(--body-text);
-      display: flex; align-items: flex-start; gap: 0.6rem; line-height: 1.5;
-    }
-    .pillar-num {
-      font-family: var(--ff-display); font-size: 0.7rem; font-weight: 900;
-      background: var(--teal); color: #fff; border-radius: 50%;
-      width: 18px; height: 18px; display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0; margin-top: 0.05rem;
-    }
-
-    /* Screenshot preview */
-    .init-preview {
-      border-radius: 8px; overflow: hidden;
-      border: 1px solid var(--border);
-      margin-bottom: 1.2rem;
-      position: relative;
-    }
-    .init-preview img { width: 100%; display: block; }
-    .preview-caption {
-      position: absolute; bottom: 0; left: 0; right: 0;
-      background: rgba(26,51,51,0.75); backdrop-filter: blur(4px);
-      padding: 0.4rem 0.7rem;
-      font-size: 0.72rem; color: rgba(255,255,255,0.8); font-style: italic;
-    }
-
-    /* Footer */
-    .init-footer {
-      margin-top: auto; padding-top: 1rem;
-      border-top: 1px solid var(--border);
-    }
-    .init-footer-row { display: flex; align-items: center; gap: 1rem; }
-    .init-link {
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      font-size: 0.85rem; font-weight: 700; font-family: var(--ff-display);
-      color: var(--teal-dark); transition: gap var(--transition);
-    }
-    .init-card.yeahdev   .init-link { color: #C1390F; }
-    .init-card.workout   .init-link { color: #1565C0; }
-    .init-card.gametrack .init-link { color: #4527A0; }
-    .init-link:hover { gap: 0.7rem; }
-
-    .init-status {
-      display: inline-flex; align-items: center; gap: 0.35rem;
-      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em;
-      text-transform: uppercase; color: var(--muted); margin-left: auto;
-    }
-
-    /* Self-assessment link */
-    .assessment-link {
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      font-size: 0.82rem; font-weight: 600; color: var(--teal-dark);
-      border: 1px solid rgba(26,154,154,0.35); border-radius: 4px;
-      padding: 0.35rem 0.8rem; margin-top: 0.5rem;
-      transition: background var(--transition), border-color var(--transition);
-      align-self: flex-start;
-    }
-    .assessment-link:hover { background: var(--light-bg); border-color: var(--teal); }
-
-    /* Contribute banner */
-    .contribute-banner {
-      background: var(--light-bg); border: 1px solid var(--border); border-radius: 12px;
-      padding: 2.2rem 2.5rem; display: flex; align-items: center;
-      justify-content: space-between; gap: 2rem; flex-wrap: wrap; margin-top: 3rem;
-    }
-    .contribute-banner h3 {
-      font-family: var(--ff-display); font-size: 1.2rem; color: var(--ink);
-      margin-bottom: 0.3rem; font-weight: 800;
-    }
-    .contribute-banner p { font-size: 0.9rem; color: var(--muted); }
-
-    @media (max-width: 720px) { .initiatives-grid { grid-template-columns: 1fr; } }
-  </style>
 </head>
 <body>
 
-<!-- ===== NAV ===== -->
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="14" height="14" rx="2" stroke="#2ABFBF" stroke-width="2.2" fill="none"/><rect x="20" y="2" width="14" height="14" rx="2" stroke="#2ABFBF" stroke-width="2.2" fill="none"/><rect x="2" y="20" width="14" height="14" rx="2" stroke="#2ABFBF" stroke-width="2.2" fill="none"/><rect x="20" y="20" width="14" height="14" rx="2" stroke="#2ABFBF" stroke-width="2.2" fill="none"/><line x1="9" y1="16" x2="9" y2="20" stroke="#2ABFBF" stroke-width="2.2"/><line x1="27" y1="16" x2="27" y2="20" stroke="#2ABFBF" stroke-width="2.2"/><line x1="16" y1="9" x2="20" y2="9" stroke="#2ABFBF" stroke-width="2.2"/><line x1="16" y1="27" x2="20" y2="27" stroke="#2ABFBF" stroke-width="2.2"/><circle cx="9" cy="9" r="1.5" fill="#2ABFBF"/><circle cx="27" cy="9" r="1.5" fill="#2ABFBF"/><circle cx="9" cy="27" r="1.5" fill="#2ABFBF"/><circle cx="27" cy="27" r="1.5" fill="#2ABFBF"/></svg>
-      <span>Happy<span class="logo-bein">Bein</span></span>
-    </a>
+    <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="HappyBein" /></a>
     <ul class="nav-links">
-      <li class="nav-item"><a href="#">About HappyBein <span class="nav-arrow"></span></a>
-        <div class="dropdown"><a href="manifesto.html">The HappyBein Manifesto</a><a href="contact.html">Connect &amp; Collaborate</a></div>
+      <li class="nav-item">
+        <a href="#">Initiatives <span class="nav-arrow"></span></a>
+        <div class="dropdown">
+          <a href="initiatives.html#happybein">HappyBein Foundation</a>
+          <a href="initiatives.html#yeahvibe">YeahVibe</a>
+          <a href="initiatives.html#yeahsight">YeahSight</a>
+          <a href="initiatives.html#yeahdev">YeahDev</a>
+          <a href="initiatives.html#workout">YeahVibe Workout</a>
+          <a href="initiatives.html#gametrack">YeahVibe GameTrack</a>
+        </div>
       </li>
-      <li class="nav-item"><a href="#">About YeahVibe <span class="nav-arrow"></span></a>
-        <div class="dropdown"><a href="https://yeahvibe.com/" target="_blank" rel="noopener">YeahVibe – Decision Support Tool ↗</a><a href="roadmap.html">YeahVibe Roadmap</a></div>
+      <li class="nav-item">
+        <a href="#">About <span class="nav-arrow"></span></a>
+        <div class="dropdown">
+          <a href="manifesto.html">The HappyBein Manifesto</a>
+          <a href="roadmap.html">YeahVibe Roadmap</a>
+          <div class="dropdown-divider"></div>
+          <a href="contact.html">Connect &amp; Collaborate</a>
+        </div>
       </li>
-      <li class="nav-item"><a href="initiatives.html">Initiatives</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 <div class="mobile-nav" id="mobile-nav">
-  <a href="manifesto.html">The HappyBein Manifesto</a>
-  <a href="contact.html" class="sub">Connect &amp; Collaborate</a>
-  <a href="https://yeahvibe.com/" target="_blank" rel="noopener">YeahVibe Tool ↗</a>
+  <span class="section-head">Initiatives</span>
+  <a href="initiatives.html#happybein" class="sub">HappyBein Foundation</a>
+  <a href="initiatives.html#yeahvibe" class="sub">YeahVibe</a>
+  <a href="initiatives.html#yeahsight" class="sub">YeahSight</a>
+  <a href="initiatives.html#yeahdev" class="sub">YeahDev</a>
+  <a href="initiatives.html#workout" class="sub">YeahVibe Workout</a>
+  <a href="initiatives.html#gametrack" class="sub">YeahVibe GameTrack</a>
+  <span class="section-head">About</span>
+  <a href="manifesto.html" class="sub">The HappyBein Manifesto</a>
   <a href="roadmap.html" class="sub">YeahVibe Roadmap</a>
-  <a href="initiatives.html">Our Initiatives</a>
+  <a href="contact.html" class="sub">Connect &amp; Collaborate</a>
 </div>
 
-<!-- ===== PAGE HERO ===== -->
 <div class="page-hero">
   <div class="page-hero-inner">
     <div class="section-label">What We're Building</div>
     <h1>Our Initiatives</h1>
-    <p class="lead">Five active instruments in the HappyBein ecosystem — each one a focused tool designed to help individuals simplify complexity, build leverage, and live with more purpose.</p>
+    <p class="lead">Six instruments in the HappyBein ecosystem — each one a focused tool designed to help individuals simplify complexity, build leverage, and live with more purpose.</p>
   </div>
 </div>
 
@@ -240,8 +65,41 @@
     <div class="section-inner">
       <div class="initiatives-grid">
 
-        <!-- ══ 1. YeahVibe ══ -->
-        <div class="init-card yeahvibe fade-up">
+        <!-- 1. HappyBein Foundation -->
+        <div class="init-card happybein fade-up" id="happybein">
+          <div class="init-banner"></div>
+          <div class="init-body">
+            <div class="init-header">
+              <div class="init-icon">🏛</div>
+              <div>
+                <div class="init-name">HappyBein Foundation</div>
+                <div class="init-url">happybein.com</div>
+              </div>
+            </div>
+            <span class="init-type-badge"><span class="init-status-dot"></span>The Architect</span>
+            <p class="init-summary">A purpose-driven foundation dedicated to simplifying societal complexity. We build the frameworks that help individuals and leaders navigate a noisy world with clarity.</p>
+            <button class="init-toggle">Read more ↓</button>
+            <div class="init-details">
+              <div class="init-details-inner">
+                <ul class="init-features">
+                  <li><span class="feat-dot"></span>Research studio studying societal challenges and curating best practices</li>
+                  <li><span class="feat-dot"></span>Defines the vision and answers <em>"Why does this matter?"</em></li>
+                  <li><span class="feat-dot"></span>Non-profit, Eindhoven, Netherlands — founded 2021</li>
+                  <li><span class="feat-dot"></span>Operates across two streams: Internal Efficiency + External Understanding</li>
+                </ul>
+              </div>
+            </div>
+            <div class="init-footer">
+              <div class="init-footer-row">
+                <a href="manifesto.html" class="init-link">Read the Manifesto ↗</a>
+                <span class="init-status"><span class="init-status-dot" style="background:#29ABE2;"></span>Active</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. YeahVibe -->
+        <div class="init-card yeahvibe fade-up" id="yeahvibe">
           <div class="init-banner"></div>
           <div class="init-body">
             <div class="init-header">
@@ -252,17 +110,21 @@
               </div>
             </div>
             <span class="init-type-badge"><span class="init-status-dot"></span>Core Platform</span>
-            <div class="init-tagline">"Stop managing time. Start building leverage."</div>
-            <p class="init-desc">The remedy for modern chaos — the overwhelm, the paralysis, the feeling of being drained while standing still. YeahVibe pre-filters the noise into a prioritised Master List for high-leverage living, structured around 5 Pillars that cover every dimension of a well-directed life.</p>
-            <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal-dark);margin-bottom:0.6rem;">The 5 Pillars of Leverage</div>
-            <ul class="pillars-list">
-              <li><span class="pillar-num">1</span><span><strong>Direction &amp; Priorities</strong> — Define your North Star so every effort counts.</span></li>
-              <li><span class="pillar-num">2</span><span><strong>Mindset</strong> — Cognitive reframing and resilience for sustainable growth.</span></li>
-              <li><span class="pillar-num">3</span><span><strong>Surroundings &amp; Processes</strong> — Reduce friction, reclaim energy.</span></li>
-              <li><span class="pillar-num">4</span><span><strong>Collaboration &amp; Leadership</strong> — Scale your impact through others.</span></li>
-              <li><span class="pillar-num">5</span><span><strong>YeahSight</strong> — Understand the world to navigate it confidently.</span></li>
-            </ul>
-            <a href="https://form.jotform.com/222552689387066" target="_blank" rel="noopener" class="assessment-link">🎯 Take the Self-Assessment →</a>
+            <p class="init-summary">The remedy for modern chaos. A free, modular repository of "Life Recipes" structured around 5 Pillars of Leverage — turning abstract wisdom into clear, actionable steps.</p>
+            <button class="init-toggle">Read more ↓</button>
+            <div class="init-details">
+              <div class="init-details-inner">
+                <div style="font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-dark);margin-bottom:.5rem;">The 5 Pillars of Leverage</div>
+                <ul class="pillars-list">
+                  <li><span class="pillar-num">1</span><span><strong>Direction &amp; Priorities</strong> — Define your North Star so every effort counts.</span></li>
+                  <li><span class="pillar-num">2</span><span><strong>Mindset</strong> — Cognitive reframing for sustainable growth.</span></li>
+                  <li><span class="pillar-num">3</span><span><strong>Surroundings &amp; Processes</strong> — Reduce friction, reclaim energy.</span></li>
+                  <li><span class="pillar-num">4</span><span><strong>Collaboration &amp; Leadership</strong> — Scale your impact through others.</span></li>
+                  <li><span class="pillar-num">5</span><span><strong>YeahSight</strong> — Understand the world to navigate it confidently.</span></li>
+                </ul>
+                <a href="https://form.jotform.com/222552689387066" target="_blank" rel="noopener" class="assessment-link">🎯 Take the Self-Assessment →</a>
+              </div>
+            </div>
             <div class="init-footer">
               <div class="init-footer-row">
                 <a href="https://yeahvibe.com/" target="_blank" rel="noopener" class="init-link">Visit YeahVibe ↗</a>
@@ -272,8 +134,8 @@
           </div>
         </div>
 
-        <!-- ══ 2. YeahSight ══ -->
-        <div class="init-card yeahsight fade-up">
+        <!-- 3. YeahSight -->
+        <div class="init-card yeahsight fade-up" id="yeahsight">
           <div class="init-banner"></div>
           <div class="init-body">
             <div class="init-header">
@@ -284,13 +146,19 @@
               </div>
             </div>
             <span class="init-type-badge"><span class="init-status-dot"></span>World Context</span>
-            <div class="init-tagline">"To win, you must see the board."</div>
-            <p class="init-desc">Pillar 5 of the YeahVibe framework — the external lens. The remedy for feeling concerned about the world's future. Efficiency without direction is aimless; YeahSight decodes global trends, geopolitical shifts, and societal forces into plain language so you can define a confident, long-term direction.</p>
-            <ul class="init-features">
-              <li><span class="feat-dot"></span>Global trends translated into actionable insight</li>
-              <li><span class="feat-dot"></span>Systemic understanding of how the world impacts daily decisions</li>
-              <li><span class="feat-dot"></span>Moves you from <em>Confused</em> → <em>Informed</em> → <em>Directed</em></li>
-            </ul>
+            <p class="init-summary">Pillar 5 of YeahVibe. Decodes global trends and societal complexity into plain language so you can define a confident, long-term direction.</p>
+            <button class="init-toggle">Read more ↓</button>
+            <div class="init-details">
+              <div class="init-details-inner">
+                <p style="font-size:.86rem;color:var(--muted);margin-bottom:.8rem;font-style:italic;">"To win, you must see the board."</p>
+                <ul class="init-features">
+                  <li><span class="feat-dot"></span>Global trends translated into actionable insight</li>
+                  <li><span class="feat-dot"></span>Shows how the state of the world impacts daily decisions</li>
+                  <li><span class="feat-dot"></span>The remedy for feeling concerned about the world's future</li>
+                  <li><span class="feat-dot"></span>Moves you: <em>Confused → Informed → Directed</em></li>
+                </ul>
+              </div>
+            </div>
             <div class="init-footer">
               <div class="init-footer-row">
                 <a href="https://yeahsight.com/" target="_blank" rel="noopener" class="init-link">Visit YeahSight ↗</a>
@@ -300,8 +168,8 @@
           </div>
         </div>
 
-        <!-- ══ 3. YeahDev ══ -->
-        <div class="init-card yeahdev fade-up">
+        <!-- 4. YeahDev -->
+        <div class="init-card yeahdev fade-up" id="yeahdev">
           <div class="init-banner"></div>
           <div class="init-body">
             <div class="init-header">
@@ -312,22 +180,19 @@
               </div>
             </div>
             <span class="init-type-badge"><span class="init-status-dot"></span>Article Repository</span>
-            <div class="init-tagline">"Practical knowledge to build your initiative."</div>
-            <p class="init-desc">A curated repository of no-fluff, no-paywall articles written for founders, builders, and makers. YeahDev covers the practical knowledge you actually need when developing a project — from lean tech stacks and automation to marketing, growth, and brand strategy.</p>
-
-            <!-- Screenshot preview -->
-            <div class="init-preview">
-              <img src="https://happybein.com/wp-content/uploads/2021/09/stamp.png"
-                   alt="YeahDev article repository"
-                   onerror="this.parentElement.style.display='none'"
-              />
+            <p class="init-summary">A curated library of no-fluff, no-paywall articles for founders, builders, and makers developing an initiative.</p>
+            <button class="init-toggle">Read more ↓</button>
+            <div class="init-details">
+              <div class="init-details-inner">
+                <p style="font-size:.86rem;color:var(--muted);margin-bottom:.8rem;font-style:italic;">"Practical knowledge to build your initiative."</p>
+                <ul class="init-features">
+                  <li><span class="feat-dot"></span>Categories: AI Tools, Automation, Marketing, Growth</li>
+                  <li><span class="feat-dot"></span>No fluff, no paywalls — straight-up useful articles</li>
+                  <li><span class="feat-dot"></span>Written for founders, builders, and makers</li>
+                  <li><span class="feat-dot"></span>New articles published continuously</li>
+                </ul>
+              </div>
             </div>
-
-            <ul class="init-features">
-              <li><span class="feat-dot"></span>Categorised articles: AI Tools, Automation, Marketing, Growth</li>
-              <li><span class="feat-dot"></span>Written for founders and makers — no fluff, no paywalls</li>
-              <li><span class="feat-dot"></span>New articles published continuously</li>
-            </ul>
             <div class="init-footer">
               <div class="init-footer-row">
                 <a href="https://yeahdev.com/" target="_blank" rel="noopener" class="init-link">Visit YeahDev ↗</a>
@@ -337,8 +202,8 @@
           </div>
         </div>
 
-        <!-- ══ 4. Workout ══ -->
-        <div class="init-card workout fade-up">
+        <!-- 5. Workout -->
+        <div class="init-card workout fade-up" id="workout">
           <div class="init-banner"></div>
           <div class="init-body">
             <div class="init-header">
@@ -349,14 +214,19 @@
               </div>
             </div>
             <span class="init-type-badge"><span class="init-status-dot"></span>Micro-Exercise Tool</span>
-            <div class="init-tagline">"Move a little. Gain a lot."</div>
-            <p class="init-desc">A lightweight tool that randomly selects short exercises suited for home or work situations. No gym required — just a quick, randomised movement break to counter sedentary routines. Each exercise comes with a how-to video so you always know exactly what to do.</p>
-            <ul class="init-features">
-              <li><span class="feat-dot"></span>Random exercise selection — home &amp; office friendly</li>
-              <li><span class="feat-dot"></span>Instructional video for every exercise</li>
-              <li><span class="feat-dot"></span>FR / EN — available in French and English</li>
-              <li><span class="feat-dot"></span>"Next Exercise" flow keeps sessions fast and frictionless</li>
-            </ul>
+            <p class="init-summary">Randomly selects short exercises suited for home or office use. No gym required — just a quick movement break to counter sedentary routines.</p>
+            <button class="init-toggle">Read more ↓</button>
+            <div class="init-details">
+              <div class="init-details-inner">
+                <p style="font-size:.86rem;color:var(--muted);margin-bottom:.8rem;font-style:italic;">"Move a little. Gain a lot."</p>
+                <ul class="init-features">
+                  <li><span class="feat-dot"></span>Random exercise selection — home &amp; office friendly</li>
+                  <li><span class="feat-dot"></span>Instructional YouTube video for every exercise</li>
+                  <li><span class="feat-dot"></span>Available in French 🇫🇷 and English 🇬🇧</li>
+                  <li><span class="feat-dot"></span>"Next Exercise" flow — fast and frictionless</li>
+                </ul>
+              </div>
+            </div>
             <div class="init-footer">
               <div class="init-footer-row">
                 <a href="https://workout.yeahvibe.com/" target="_blank" rel="noopener" class="init-link">Open Workout Tool ↗</a>
@@ -366,8 +236,8 @@
           </div>
         </div>
 
-        <!-- ══ 5. GameTrack ══ -->
-        <div class="init-card gametrack fade-up">
+        <!-- 6. GameTrack -->
+        <div class="init-card gametrack fade-up" id="gametrack">
           <div class="init-banner"></div>
           <div class="init-body">
             <div class="init-header">
@@ -378,13 +248,19 @@
               </div>
             </div>
             <span class="init-type-badge"><span class="init-status-dot"></span>Score Tracker</span>
-            <div class="init-tagline">"Track the score. Raise the stakes."</div>
-            <p class="init-desc">A simple, focused score tracker for games. Whether you are playing board games, card games, or any activity that needs a live scoreboard, GameTrack keeps the count clear so you can focus on playing — not remembering numbers.</p>
-            <ul class="init-features">
-              <li><span class="feat-dot"></span>Real-time score tracking for any game format</li>
-              <li><span class="feat-dot"></span>Lightweight and distraction-free — built for play</li>
-              <li><span class="feat-dot"></span>Works for multiplayer sessions — family, friends, or teams</li>
-            </ul>
+            <p class="init-summary">A simple, distraction-free score tracker for any game — board games, card games, or any activity that needs a live scoreboard.</p>
+            <button class="init-toggle">Read more ↓</button>
+            <div class="init-details">
+              <div class="init-details-inner">
+                <p style="font-size:.86rem;color:var(--muted);margin-bottom:.8rem;font-style:italic;">"Track the score. Raise the stakes."</p>
+                <ul class="init-features">
+                  <li><span class="feat-dot"></span>Real-time score tracking for any game format</li>
+                  <li><span class="feat-dot"></span>Lightweight and distraction-free — built for play</li>
+                  <li><span class="feat-dot"></span>Works for multiplayer: family, friends, or teams</li>
+                  <li><span class="feat-dot"></span>Mindful leisure — rest intentionally, not reactively</li>
+                </ul>
+              </div>
+            </div>
             <div class="init-footer">
               <div class="init-footer-row">
                 <a href="https://gametrack.yeahvibe.com/" target="_blank" rel="noopener" class="init-link">Open GameTrack ↗</a>
@@ -408,31 +284,32 @@
   </section>
 </main>
 
-<!-- ===== FOOTER ===== -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <a href="index.html" class="nav-logo" style="color:#fff;">
-        <svg viewBox="0 0 36 36" fill="none" style="width:30px;height:30px;" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="14" height="14" rx="2" stroke="#2ABFBF" stroke-width="2.2" fill="none"/><rect x="20" y="2" width="14" height="14" rx="2" stroke="#2ABFBF" stroke-width="2.2" fill="none"/><rect x="2" y="20" width="14" height="14" rx="2" stroke="#2ABFBF" stroke-width="2.2" fill="none"/><rect x="20" y="20" width="14" height="14" rx="2" stroke="#2ABFBF" stroke-width="2.2" fill="none"/><line x1="9" y1="16" x2="9" y2="20" stroke="#2ABFBF" stroke-width="2.2"/><line x1="27" y1="16" x2="27" y2="20" stroke="#2ABFBF" stroke-width="2.2"/><line x1="16" y1="9" x2="20" y2="9" stroke="#2ABFBF" stroke-width="2.2"/><line x1="16" y1="27" x2="20" y2="27" stroke="#2ABFBF" stroke-width="2.2"/><circle cx="9" cy="9" r="1.5" fill="#2ABFBF"/><circle cx="27" cy="9" r="1.5" fill="#2ABFBF"/><circle cx="9" cy="27" r="1.5" fill="#2ABFBF"/><circle cx="27" cy="27" r="1.5" fill="#2ABFBF"/></svg>
-        <span>Happy<span class="logo-bein">Bein</span></span>
-      </a>
+      <div class="footer-logo"><a href="index.html"><img src="images/logo.png" alt="HappyBein" /></a></div>
       <p>A purpose-driven foundation simplifying societal complexity — one decision at a time.</p>
     </div>
     <div class="footer-col">
-      <h4>HappyBein</h4>
-      <a href="manifesto.html">The Manifesto</a>
-      <a href="initiatives.html">Our Initiatives</a>
-      <a href="contact.html">Connect &amp; Collaborate</a>
+      <h4>Initiatives</h4>
+      <a href="initiatives.html#happybein">HappyBein Foundation</a>
+      <a href="initiatives.html#yeahvibe">YeahVibe</a>
+      <a href="initiatives.html#yeahsight">YeahSight</a>
+      <a href="initiatives.html#yeahdev">YeahDev</a>
+      <a href="initiatives.html#workout">Workout Tool</a>
+      <a href="initiatives.html#gametrack">GameTrack</a>
     </div>
     <div class="footer-col">
-      <h4>YeahVibe</h4>
-      <a href="https://yeahvibe.com/" target="_blank" rel="noopener">YeahVibe Tool ↗</a>
-      <a href="roadmap.html">Product Roadmap</a>
-      <a href="https://form.jotform.com/222551513307043" target="_blank" rel="noopener">1-Min Feedback Form ↗</a>
+      <h4>About</h4>
+      <a href="manifesto.html">The Manifesto</a>
+      <a href="roadmap.html">YeahVibe Roadmap</a>
+      <a href="contact.html">Connect &amp; Collaborate</a>
+      <a href="https://form.jotform.com/222551513307043" target="_blank" rel="noopener">1-Min Feedback ↗</a>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>©2021–2026 HappyBein. Eindhoven, Netherlands.</span>
+    <span>©2021–2026 HappyBein · Eindhoven, Netherlands.</span>
+    <span class="footer-version">v1.1 · May 2026</span>
     <div class="social-links">
       <a href="https://m.facebook.com/groups/463088738463506" target="_blank" rel="noopener">Facebook</a>
       <a href="https://www.linkedin.com/company/happybein/" target="_blank" rel="noopener">LinkedIn</a>

@@ -4,215 +4,140 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Connect &amp; Collaborate – HappyBein</title>
-  <meta name="description" content="Whether you are seeking clarity through our tools or looking to support our foundation's mission, we are ready to listen." />
+  <meta name="description" content="Reach the HappyBein team — partners, contributors, and users welcome." />
   <link rel="icon" href="https://happybein.com/wp-content/uploads/2021/09/fav_icon.png" />
   <link rel="stylesheet" href="css/style.css" />
-  <style>
-    .contact-email-box {
-      background: var(--light-bg);
-      border: 2px solid var(--border);
-      border-radius: 12px;
-      padding: 2.5rem;
-      text-align: center;
-    }
-    .contact-email-box .email-label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--teal-dark);
-      margin-bottom: 0.8rem;
-    }
-    .contact-email-box .email-address {
-      display: inline-block;
-      font-family: var(--ff-display);
-      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-      font-weight: 800;
-      color: var(--ink);
-      background: var(--white);
-      border: 1.5px solid var(--border);
-      border-radius: 8px;
-      padding: 0.8rem 1.8rem;
-      margin: 0.5rem 0 1.2rem;
-      letter-spacing: 0.01em;
-      transition: border-color var(--transition), box-shadow var(--transition);
-    }
-    .contact-email-box .email-address:hover {
-      border-color: var(--teal);
-      box-shadow: 0 0 0 3px rgba(42,191,191,0.12);
-      color: var(--teal-dark);
-    }
-    .contact-email-box p {
-      font-size: 0.9rem;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-    .contact-channels {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-    .channel-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.2rem 1.4rem;
-      display: flex;
-      align-items: center;
-      gap: 0.9rem;
-      transition: border-color var(--transition), transform var(--transition);
-    }
-    .channel-card:hover {
-      border-color: var(--teal);
-      transform: translateY(-2px);
-    }
-    .channel-icon {
-      font-size: 1.4rem;
-      flex-shrink: 0;
-    }
-    .channel-label {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 0.15rem;
-    }
-    .channel-value {
-      font-family: var(--ff-display);
-      font-size: 0.88rem;
-      font-weight: 700;
-      color: var(--teal-dark);
-    }
-    @media (max-width: 600px) {
-      .contact-channels { grid-template-columns: 1fr; }
-    }
-  </style>
 </head>
 <body>
-
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="14" height="14" rx="2" stroke="#2ABFBF" stroke-width="2.2" fill="none"/><rect x="20" y="2" width="14" height="14" rx="2" stroke="#2ABFBF" stroke-width="2.2" fill="none"/><rect x="2" y="20" width="14" height="14" rx="2" stroke="#2ABFBF" stroke-width="2.2" fill="none"/><rect x="20" y="20" width="14" height="14" rx="2" stroke="#2ABFBF" stroke-width="2.2" fill="none"/><line x1="9" y1="16" x2="9" y2="20" stroke="#2ABFBF" stroke-width="2.2"/><line x1="27" y1="16" x2="27" y2="20" stroke="#2ABFBF" stroke-width="2.2"/><line x1="16" y1="9" x2="20" y2="9" stroke="#2ABFBF" stroke-width="2.2"/><line x1="16" y1="27" x2="20" y2="27" stroke="#2ABFBF" stroke-width="2.2"/><circle cx="9" cy="9" r="1.5" fill="#2ABFBF"/><circle cx="27" cy="9" r="1.5" fill="#2ABFBF"/><circle cx="9" cy="27" r="1.5" fill="#2ABFBF"/><circle cx="27" cy="27" r="1.5" fill="#2ABFBF"/></svg>
-      <span>Happy<span class="logo-bein">Bein</span></span>
-    </a>
+    <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="HappyBein" /></a>
     <ul class="nav-links">
-      <li class="nav-item"><a href="#">About HappyBein <span class="nav-arrow"></span></a>
-        <div class="dropdown"><a href="manifesto.html">The HappyBein Manifesto</a><a href="contact.html">Connect &amp; Collaborate</a></div>
+      <li class="nav-item">
+        <a href="#">Initiatives <span class="nav-arrow"></span></a>
+        <div class="dropdown">
+          <a href="initiatives.html#happybein">HappyBein Foundation</a>
+          <a href="initiatives.html#yeahvibe">YeahVibe</a>
+          <a href="initiatives.html#yeahsight">YeahSight</a>
+          <a href="initiatives.html#yeahdev">YeahDev</a>
+          <a href="initiatives.html#workout">YeahVibe Workout</a>
+          <a href="initiatives.html#gametrack">YeahVibe GameTrack</a>
+        </div>
       </li>
-      <li class="nav-item"><a href="#">About YeahVibe <span class="nav-arrow"></span></a>
-        <div class="dropdown"><a href="https://yeahvibe.com/" target="_blank" rel="noopener">YeahVibe – Decision Support Tool ↗</a><a href="roadmap.html">YeahVibe Roadmap</a></div>
+      <li class="nav-item">
+        <a href="#">About <span class="nav-arrow"></span></a>
+        <div class="dropdown">
+          <a href="manifesto.html">The HappyBein Manifesto</a>
+          <a href="roadmap.html">YeahVibe Roadmap</a>
+          <div class="dropdown-divider"></div>
+          <a href="contact.html">Connect &amp; Collaborate</a>
+        </div>
       </li>
-      <li class="nav-item"><a href="initiatives.html">Initiatives</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 <div class="mobile-nav" id="mobile-nav">
-  <a href="manifesto.html">The HappyBein Manifesto</a>
-  <a href="contact.html" class="sub">Connect &amp; Collaborate</a>
-  <a href="https://yeahvibe.com/" target="_blank" rel="noopener">YeahVibe Tool ↗</a>
+  <span class="section-head">Initiatives</span>
+  <a href="initiatives.html#happybein" class="sub">HappyBein Foundation</a>
+  <a href="initiatives.html#yeahvibe" class="sub">YeahVibe</a>
+  <a href="initiatives.html#yeahsight" class="sub">YeahSight</a>
+  <a href="initiatives.html#yeahdev" class="sub">YeahDev</a>
+  <a href="initiatives.html#workout" class="sub">YeahVibe Workout</a>
+  <a href="initiatives.html#gametrack" class="sub">YeahVibe GameTrack</a>
+  <span class="section-head">About</span>
+  <a href="manifesto.html" class="sub">The HappyBein Manifesto</a>
   <a href="roadmap.html" class="sub">YeahVibe Roadmap</a>
-  <a href="initiatives.html">Our Initiatives</a>
+  <a href="contact.html" class="sub">Connect &amp; Collaborate</a>
 </div>
-
 <div class="page-hero">
   <div class="page-hero-inner">
     <div class="section-label">Get In Touch</div>
     <h1>Connect &amp; Collaborate</h1>
-    <p class="lead">Individual well-being and collective progress are the result of conscious choices. Whether you are seeking clarity through our tools or looking to support our foundation's mission, we are ready to listen.</p>
+    <p class="lead">Individual well-being and collective progress are the result of conscious choices. Whether you are seeking clarity through our tools or looking to support our mission, we are ready to listen.</p>
   </div>
 </div>
-
 <main>
-  <section>
-    <div class="section-inner">
-      <div class="contact-grid">
-
-        <!-- Left: info -->
-        <div class="contact-info fade-up">
-          <h3>For Partners &amp; Contributors (HappyBein)</h3>
-          <p><strong>Help us build the Architecture.</strong> We are actively seeking open-minded supporters and visionary leaders to elevate the HappyBein mission. If you resonate with our North Star of simplifying societal complexity, let's discuss how we can collaborate on:</p>
-          <ul>
-            <li><strong>Content Creation:</strong> Developing frameworks for better decision-making.</li>
-            <li><strong>Outreach:</strong> Expanding our network to those who need decision support most.</li>
-            <li><strong>Validation:</strong> Piloting our tools within your organisation or community.</li>
-          </ul>
-
-          <h3>For Users (YeahVibe)</h3>
-          <p><strong>Refine the Instrument.</strong> Are you using YeahVibe to simplify your daily decisions? Your feedback is the fuel for our roadmap.</p>
-          <ul>
-            <li>Have a suggestion for a new checklist or feature?</li>
-            <li>Found a bug or need technical support?</li>
-            <li><a href="https://form.jotform.com/222551513307043" target="_blank" rel="noopener">Take our 1-Minute Survey →</a></li>
-          </ul>
-
-          <h3>Location</h3>
-          <div class="contact-detail"><strong>📍</strong><span>Eindhoven, Netherlands</span></div>
+<section>
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="contact-info fade-up">
+        <h3>For Partners &amp; Contributors</h3>
+        <p><strong>Help us build the Architecture.</strong> We are actively seeking open-minded supporters and visionary leaders. Let's collaborate on:</p>
+        <ul>
+          <li><strong>Content Creation:</strong> Developing frameworks for better decision-making.</li>
+          <li><strong>Outreach:</strong> Expanding our network to those who need decision support most.</li>
+          <li><strong>Validation:</strong> Piloting our tools within your organisation or community.</li>
+        </ul>
+        <h3>For Users (YeahVibe)</h3>
+        <p><strong>Refine the Instrument.</strong> Your feedback is the fuel for our roadmap.</p>
+        <ul>
+          <li>Have a suggestion for a new checklist or feature?</li>
+          <li>Found a bug or need technical support?</li>
+          <li><a href="https://form.jotform.com/222551513307043" target="_blank" rel="noopener">Take our 1-Minute Survey →</a></li>
+        </ul>
+        <h3>Location</h3>
+        <div style="font-size:.92rem;color:var(--muted);padding:.5rem 0;">📍 Eindhoven, Netherlands</div>
+      </div>
+      <div class="fade-up">
+        <div class="contact-email-box">
+          <div class="email-label">✉ Drop us an email</div>
+          <a href="mailto:happybein1@gmail.com" class="email-address">happybein1@gmail.com</a>
+          <p>We typically reply within 2–3 business days.<br>Whether you are a partner, contributor, or curious user — we'd love to hear from you.</p>
         </div>
-
-        <!-- Right: email + channels -->
-        <div class="fade-up">
-          <div class="contact-email-box">
-            <div class="email-label">✉ Drop us an email</div>
-            <a href="mailto:happybein1@gmail.com" class="email-address">happybein1@gmail.com</a>
-            <p>We typically reply within 2–3 business days.<br>Whether you are a partner, contributor, or curious user — we'd love to hear from you.</p>
-          </div>
-
-          <div class="contact-channels">
-            <a href="https://discord.com/invite/62xRJHCbRW" target="_blank" rel="noopener" class="channel-card">
-              <div class="channel-icon">💬</div>
-              <div>
-                <div class="channel-label">Chat with us</div>
-                <div class="channel-value">Discord Community →</div>
-              </div>
-            </a>
-            <a href="https://www.linkedin.com/company/happybein/" target="_blank" rel="noopener" class="channel-card">
-              <div class="channel-icon">🔗</div>
-              <div>
-                <div class="channel-label">Follow us</div>
-                <div class="channel-value">LinkedIn →</div>
-              </div>
-            </a>
-            <a href="https://m.facebook.com/groups/463088738463506" target="_blank" rel="noopener" class="channel-card">
-              <div class="channel-icon">👥</div>
-              <div>
-                <div class="channel-label">Join the group</div>
-                <div class="channel-value">Facebook →</div>
-              </div>
-            </a>
-            <a href="https://form.jotform.com/222551513307043" target="_blank" rel="noopener" class="channel-card">
-              <div class="channel-icon">📋</div>
-              <div>
-                <div class="channel-label">Quick feedback</div>
-                <div class="channel-value">1-Min Survey →</div>
-              </div>
-            </a>
-          </div>
+        <div class="contact-channels">
+          <a href="https://discord.com/invite/62xRJHCbRW" target="_blank" rel="noopener" class="channel-card">
+            <div class="channel-icon">💬</div><div><div class="channel-label">Chat with us</div><div class="channel-value">Discord →</div></div>
+          </a>
+          <a href="https://www.linkedin.com/company/happybein/" target="_blank" rel="noopener" class="channel-card">
+            <div class="channel-icon">🔗</div><div><div class="channel-label">Follow us</div><div class="channel-value">LinkedIn →</div></div>
+          </a>
+          <a href="https://m.facebook.com/groups/463088738463506" target="_blank" rel="noopener" class="channel-card">
+            <div class="channel-icon">👥</div><div><div class="channel-label">Join the group</div><div class="channel-value">Facebook →</div></div>
+          </a>
+          <a href="https://form.jotform.com/222551513307043" target="_blank" rel="noopener" class="channel-card">
+            <div class="channel-icon">📋</div><div><div class="channel-label">Quick feedback</div><div class="channel-value">1-Min Survey →</div></div>
+          </a>
         </div>
-
       </div>
     </div>
-  </section>
+  </div>
+</section>
 </main>
-
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <a href="index.html" class="nav-logo" style="color:#fff;"><svg viewBox="0 0 36 36" fill="none" style="width:30px;height:30px;" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="14" height="14" rx="2" stroke="#2ABFBF" stroke-width="2.2" fill="none"/><rect x="20" y="2" width="14" height="14" rx="2" stroke="#2ABFBF" stroke-width="2.2" fill="none"/><rect x="2" y="20" width="14" height="14" rx="2" stroke="#2ABFBF" stroke-width="2.2" fill="none"/><rect x="20" y="20" width="14" height="14" rx="2" stroke="#2ABFBF" stroke-width="2.2" fill="none"/><line x1="9" y1="16" x2="9" y2="20" stroke="#2ABFBF" stroke-width="2.2"/><line x1="27" y1="16" x2="27" y2="20" stroke="#2ABFBF" stroke-width="2.2"/><line x1="16" y1="9" x2="20" y2="9" stroke="#2ABFBF" stroke-width="2.2"/><line x1="16" y1="27" x2="20" y2="27" stroke="#2ABFBF" stroke-width="2.2"/><circle cx="9" cy="9" r="1.5" fill="#2ABFBF"/><circle cx="27" cy="9" r="1.5" fill="#2ABFBF"/><circle cx="9" cy="27" r="1.5" fill="#2ABFBF"/><circle cx="27" cy="27" r="1.5" fill="#2ABFBF"/></svg><span>Happy<span class="logo-bein">Bein</span></span></a>
+      <div class="footer-logo"><a href="index.html"><img src="images/logo.png" alt="HappyBein" /></a></div>
       <p>A purpose-driven foundation simplifying societal complexity — one decision at a time.</p>
     </div>
-    <div class="footer-col"><h4>HappyBein</h4><a href="manifesto.html">The Manifesto</a><a href="initiatives.html">Our Initiatives</a><a href="contact.html">Connect &amp; Collaborate</a></div>
-    <div class="footer-col"><h4>YeahVibe</h4><a href="https://yeahvibe.com/" target="_blank" rel="noopener">YeahVibe Tool ↗</a><a href="roadmap.html">Product Roadmap</a><a href="https://form.jotform.com/222551513307043" target="_blank" rel="noopener">1-Min Feedback Form ↗</a></div>
+    <div class="footer-col">
+      <h4>Initiatives</h4>
+      <a href="initiatives.html#happybein">HappyBein Foundation</a>
+      <a href="initiatives.html#yeahvibe">YeahVibe</a>
+      <a href="initiatives.html#yeahsight">YeahSight</a>
+      <a href="initiatives.html#yeahdev">YeahDev</a>
+      <a href="initiatives.html#workout">Workout Tool</a>
+      <a href="initiatives.html#gametrack">GameTrack</a>
+    </div>
+    <div class="footer-col">
+      <h4>About</h4>
+      <a href="manifesto.html">The Manifesto</a>
+      <a href="roadmap.html">YeahVibe Roadmap</a>
+      <a href="contact.html">Connect &amp; Collaborate</a>
+      <a href="https://form.jotform.com/222551513307043" target="_blank" rel="noopener">1-Min Feedback ↗</a>
+    </div>
   </div>
   <div class="footer-bottom">
-    <span>©2021–2026 HappyBein. Eindhoven, Netherlands.</span>
-    <div class="social-links"><a href="https://m.facebook.com/groups/463088738463506" target="_blank" rel="noopener">Facebook</a><a href="https://www.linkedin.com/company/happybein/" target="_blank" rel="noopener">LinkedIn</a><a href="https://discord.com/invite/62xRJHCbRW" target="_blank" rel="noopener">Discord</a><a href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a></div>
+    <span>©2021–2026 HappyBein · Eindhoven, Netherlands.</span>
+    <span class="footer-version">v1.1 · May 2026</span>
+    <div class="social-links">
+      <a href="https://m.facebook.com/groups/463088738463506" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.linkedin.com/company/happybein/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://discord.com/invite/62xRJHCbRW" target="_blank" rel="noopener">Discord</a>
+      <a href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a>
+    </div>
   </div>
 </footer>
-
 <script src="js/main.js"></script>
 </body>
 </html>
