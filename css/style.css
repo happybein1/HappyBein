@@ -91,18 +91,53 @@ nav {
 }
 .nav-item:hover .nav-arrow { transform: rotate(225deg) translateY(-1px); }
 .dropdown {
-  position: absolute; top: calc(100% + 6px); left: 0; min-width: 230px;
-  background: var(--white); border: 1px solid var(--border);
-  border-radius: var(--radius); box-shadow: 0 8px 28px var(--shadow);
-  opacity: 0; pointer-events: none; transform: translateY(-6px);
-  transition: opacity var(--tr), transform var(--tr); padding: 0.4rem 0;
+  position: absolute;
+  /* flush against the nav item — no gap so mouse stays in hover zone */
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 0 0 var(--radius) var(--radius);
+  box-shadow: 0 8px 28px var(--shadow);
+  opacity: 0;
+  pointer-events: none;
+  /* slide down instead of up so it doesn't create a gap */
+  transform: translateY(4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  padding: 0.5rem 0;
   z-index: 100;
+  /* invisible top padding bridges any sub-pixel gap */
+  padding-top: 0.6rem;
 }
-.nav-item:hover .dropdown { opacity: 1; pointer-events: auto; transform: translateY(0); }
+
+/* Invisible bridge between nav link and dropdown — fills any gap */
+.nav-item::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 8px; /* covers the transition zone */
+  background: transparent;
+}
+
+/* Keep dropdown open when hovering either the trigger or the menu itself */
+.nav-item:hover > .dropdown,
+.nav-item:focus-within > .dropdown {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
 .dropdown a {
-  display: block; padding: 0.55rem 1.2rem;
-  font-size: 0.855rem; font-family: var(--ff-body);
-  color: var(--body-text); transition: background var(--tr), color var(--tr);
+  display: block;
+  padding: 0.65rem 1.2rem;
+  font-size: 0.875rem; font-family: var(--ff-body);
+  color: var(--body-text);
+  transition: background 0.15s ease, color 0.15s ease;
+  /* no gap between items */
+  line-height: 1.3;
+  white-space: nowrap;
 }
 .dropdown a:hover { background: var(--light-bg); color: var(--teal-dark); }
 .dropdown-divider { height: 1px; background: var(--border); margin: 0.3rem 0; }
