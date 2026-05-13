@@ -1,0 +1,10 @@
+# Cloudflare Pages redirect rules
+
+# Preserve old WordPress URLs → new static pages
+/introduction-2/      /manifesto.html   301
+/introduction-2       /manifesto.html   301
+/contac-tus/          /contact.html     301
+/contac-tus           /contact.html     301
+/yeahvibe-roadmap/    /roadmap.html     301
+/yeahvibe-roadmap     /roadmap.html     301
+/projects.html   /initiatives.html   301

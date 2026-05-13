@@ -1,0 +1,30 @@
+# HappyBein
+
+> A purpose-driven foundation dedicated to simplifying societal complexity so that every citizen and leader can make conscious, informed, and impactful decisions.
+
+HappyBein operates through two vehicles: the Foundation (research & frameworks) and YeahVibe (the digital tool that delivers them).
+
+## Core Pages
+
+- [Home](https://happybein.com/): Overview of HappyBein and YeahVibe — the architect and the instrument.
+- [The HappyBein Manifesto](https://happybein.com/manifesto.html): Why we exist, how we operate, and what we believe. Covers our North Star, the two streams of clarity (internal efficiency + external understanding), and the synthesis.
+- [YeahVibe Roadmap](https://happybein.com/roadmap.html): Three-phase product roadmap — Foundation (active), Expansion (in progress), Integration (future vision).
+- [Our Initiatives](https://happybein.com/initiatives.html): Descriptions of all five active tools in the Yeah ecosystem.
+- [Connect & Collaborate](https://happybein.com/contact.html): How to reach the team. Email: happybein1@gmail.com
+
+## Initiatives
+
+- [YeahVibe](https://yeahvibe.com): Core platform. A free, modular repository of "Life Recipes" structured around 5 Pillars of Leverage: Direction, Mindset, Surroundings, Collaboration, and World Context (YeahSight).
+- [YeahSight](https://yeahsight.com): World context tool. Decodes global trends and societal complexity into plain language to support long-term decision-making.
+- [YeahDev](https://yeahdev.com): Article repository. Practical, no-paywall knowledge for founders, builders, and makers developing an initiative.
+- [YeahVibe Workout](https://workout.yeahvibe.com): Micro-exercise tool. Randomly selects short exercises for home or office use. Available in French and English.
+- [YeahVibe GameTrack](https://gametrack.yeahvibe.com): Score tracker. A lightweight real-time scoreboard for board games, card games, and any multiplayer activity.
+
+## About
+
+- Organisation type: Non-profit foundation
+- Location: Eindhoven, Netherlands
+- Contact: happybein1@gmail.com
+- Discord: https://discord.com/invite/62xRJHCbRW
+- LinkedIn: https://www.linkedin.com/company/happybein/
+- Founded: 2021
